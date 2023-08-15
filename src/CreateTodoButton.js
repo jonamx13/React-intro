@@ -1,6 +1,8 @@
+import './CreateTodoButton.css'
+
 function CreateTodoButton(props) {
     return(
-        <button>Add Task</button>
+        <button className="CreateTodoButton">+</button>
     );
 }
 
