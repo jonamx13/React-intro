@@ -1,5 +1,6 @@
 #root {
   margin: 0 24px;
+  margin-top: 40px;
   position: relative;
   min-height: 100vh;
 }
@@ -8,7 +9,7 @@ body {
   background: linear-gradient(-45deg,  #ffc8b7 0%, #ffbbd5 35%, #ace9ff 70%, #b5ffee 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 50vh;
+  height: 100vh;
   margin: 0;
   padding: 0;
   color: #1E1E1F;
