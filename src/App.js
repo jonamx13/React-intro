@@ -1,3 +1,4 @@
+import React from 'react';
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
@@ -9,14 +10,32 @@ const defaultTodos = [
   { text: 'Attend React.js Intro Course', completed: false },
   { text: 'To cry with La Llorona', completed: false },
   { text: 'Something else', completed: false },
+  { text: 'Complete derivated states', completed: true },
+
 ];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const [searchValue, setSearchValue] = React.useState('');
+
+  const completedTodos = todos.filter(
+    todo => !!todo.completed
+    ).length;
+  const totalTodos = todos.length;
+
+  console.log('Users are looking for: ' + searchValue);
+
   return (
     <>
-      <TodoCounter completed={16} total={25}/>
-      <TodoSearch />
-
+      <TodoCounter 
+      completed={completedTodos}
+      total={totalTodos}
+      />
+      <TodoSearch 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
+        
       <TodoList>
         {defaultTodos.map(todo => (
           <TodoItem 
