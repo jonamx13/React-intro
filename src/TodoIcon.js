@@ -1,18 +1,22 @@
 import { ImCross } from 'react-icons/im';
 import { ImCheckmark } from "react-icons/im";
+import './TodoIcon.css'
 
 const iconTypes = {
-    'check': <ImCheckmark />,
-    'delete': <ImCross />,
+    'check': (color) => <ImCheckmark className='Icon-svg' fill={color}/>,
+    'delete': (color) => <ImCross className='Icon-svg' fill={color}/>,
 };
 
 
-function TodoIcon({ type }) {
+function TodoIcon({ type, color, onClick, completed }) {
     return (
     <span
-    className={`Icon Icon-${type}`}
+    className={`Icon-container 
+    Icon-container-${type}
+    `}
+    onClick={onClick}
     >
-        {iconTypes[type]}
+        {iconTypes[type](color)}
     </span>
     )
 }

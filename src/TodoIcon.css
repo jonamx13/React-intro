@@ -1,0 +1,55 @@
+.Icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Icon-container-check {
+    position: absolute;
+    left: 12px;
+
+    background: linear-gradient(-45deg,  rgba(177, 177, 177, 0.5) 0%,  rgba(238, 238, 238, 0.5) 70%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 50%;
+    
+}
+
+.Icon-container-check--active {
+    color: #4caf50;
+    background: linear-gradient(-45deg,  rgba(94, 192, 85, 0.5) 0%,  rgba(177, 248, 177, 0.5) 70%);
+}
+
+.Icon-container-delete {
+    color: white;
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+    background: linear-gradient(-45deg,  rgba(185, 53, 53, 0.8) 0%,  rgba(255, 149, 149, 0.8) 70%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 50%;
+}
+
+.Icon-container-delete:hover {
+    color: red;
+}
+
+.Icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.Icon-container-check:hover .Icon-svg {
+    fill: white;
+}
+
+.Icon-container-delete:hover .Icon-svg {
+    fill: red;
+}
