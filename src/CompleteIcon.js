@@ -7,6 +7,7 @@ function CompleteIcon( { completed, onComplete }) {
         type="check"
         color={completed ? 'white' : 'gray'}
         onClick={onComplete}
+        completedColor={completed}
         />
     )
 }

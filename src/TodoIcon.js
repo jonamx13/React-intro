@@ -8,11 +8,11 @@ const iconTypes = {
 };
 
 
-function TodoIcon({ type, color, onClick, completed }) {
+function TodoIcon({ type, color, onClick, completedColor }) {
     return (
     <span
     className={`Icon-container 
-    Icon-container-${type}
+    Icon-container-${type} ${completedColor && 'Icon-container-check--active'}
     `}
     onClick={onClick}
     >
